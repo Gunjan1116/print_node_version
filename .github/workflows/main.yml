@@ -10,6 +10,8 @@ jobs:
  printV:
   runs-on: ubuntu-latest
   steps:
+    - name: checkout
+      uses: actions/checkout@v3
     - name: install node
       uses: actions/setup-node@v2
       with:
