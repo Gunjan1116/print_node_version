@@ -1,1 +1,19 @@
 
+
+name: print node version
+on:
+  push:
+   branches:
+     - main
+
+jobs:
+ printV:
+  runs-on: ubuntu-latest
+  steps:
+    - name: install node
+      uses: actions/setup-node@v2
+      with:
+       node-version: "16.x"
+    - name: print node version
+      run: node -v  
+
